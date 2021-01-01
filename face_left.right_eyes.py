@@ -1,16 +1,16 @@
-# Left and Right Eye Detection
+#***Facial feature detection***
 
-# Importing the library
+#importing the library
 import cv2
 
-# Loading the cascades
+#loading the classifiers
 face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
 righteye_cascade = cv2.CascadeClassifier('haarcascade_righteye_2splits.xml')
 lefteye_cascade = cv2.CascadeClassifier('haarcascade_lefteye_2splits.xml')
 nose_cascade = cv2.CascadeClassifier('haarcascade_nose2.xml')
 mouth_cascade = cv2.CascadeClassifier('haarcascade_mouth.xml')
 
-# Defining a function that will do the detections
+#defining a function which does detections
 def detect(gray, frame):
     faces = face_cascade.detectMultiScale(gray, 1.3, 10)
     for (x, y, w, h) in faces:
@@ -31,12 +31,13 @@ def detect(gray, frame):
             cv2.rectangle(roi_color, (mx, my), (mx+mw, my+mh), (0, 0, 255), 1)
     return frame
 
-# Doing some Face Recognition with the webcam
+#doing some Face Recognition with the webcam
 video_capture = cv2.VideoCapture(0)
 while True:
     _, frame = video_capture.read()
     gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-    canvas = detect(gray, frame)
+    canvas = detect(gray, frame) #calling the detect function
+#previewing session:
     cv2.imshow('Video', canvas)
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
