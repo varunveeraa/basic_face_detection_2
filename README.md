@@ -16,6 +16,4 @@ I've used pretrained Classifiers, i.e haarcascade_frontalface_default (for detec
 
 ### Final Result:
 <img src="result.png">
-
-
-
+(White, Yellow, Red and Blue borders for Right Eye, Left Eye, Mouth and Nose respectively)
