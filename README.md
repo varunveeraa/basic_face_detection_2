@@ -1,4 +1,4 @@
-## micro project 1: basic_face_detection_1
+## micro project 1: basic_face_detection_2
 
 ### Aim: 
 To detect the face and facial features 
