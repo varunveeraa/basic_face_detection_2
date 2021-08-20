@@ -13,7 +13,3 @@ To detect the face and facial features
 
 ### Classifiers:
 I've used pretrained Classifiers, i.e haarcascade_frontalface_default (for detecting the face), haarcascade_righteye_2splits (for detecting the right eye), haarcascade_lefteye_2splits (for detecting the left eye), haarcascade_nose2 (for detecting the nose) and haarcascade_mouth (for detcting the mouth)
-
-### Final Result:
-<img src="result.png">
-(White, Sky Blue, Red and Blue borders for Right Eye, Left Eye, Mouth and Nose respectively)
